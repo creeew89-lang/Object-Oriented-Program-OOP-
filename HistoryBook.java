@@ -1,8 +1,17 @@
-import java.awt.print.Book;
+package Vibe;
 
-public class HistoryBook extends Base {
-    public HistoryBook(int id, String createdUpdate, String updatedDate, String title, String author) {
-        super(id, createdUpdate, updatedDate, title);
+abstract class HistoryBook extends Book{
+    class BiographyHisstoryBook extends HistoryBook {
+        private String subjectPerson;
+        private String historicalPeriod;
+        private boolean primarySourceExcerpts;
+
+        @Override
+        public String toString() {
+            return "BiographyHisstoryBook{" +
+                    "subjectPerson='" + subjectPerson + '\'' +
+                    '}';
         }
     }
+}
 
